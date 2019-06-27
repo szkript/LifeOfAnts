@@ -1,4 +1,4 @@
 package com.codecool;
 
-public class Soldier extends Ants {
+public class Soldier extends Ant {
 }

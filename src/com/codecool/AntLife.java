@@ -1,22 +1,30 @@
 package com.codecool;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class AntLife {
+    private List<Ant> ants = new ArrayList<Ant>();
+
     public static void main(String[] args) {
-        int i = 1;
-        System.out.println(i);
+
+
+        Ant queen = new Queen();
+        Ant worker = new Worker();
+
     }
 }
 
 //
-//    Life of the Ants
+//    Life of the Ant
 //    In an Ant colony there are four different castes:
 //    Workers, Soldiers, Drones, and there is one Queen.
 //
 //        For the sake of simplicity let they live on a grid.
-//        Ants have an actual ( x , y ) position (initialize these within the limits of the colony,
+//        Ant have an actual ( x , y ) position (initialize these within the limits of the colony,
 //        e.g. 100 steps). They change their positions in each timestep, according to a caste-specific rule:
 //        The Queen sits in the origo and does not move.
-//        All the Ants are aware of their distance from the Queen which is the number of steps needed to get to her
+//        All the Ant are aware of their distance from the Queen which is the number of steps needed to get to her
 //        (write a function for it!).
 //        The Workers normally make one step randomly in one of the four directions.
 //        The Soldiers normally just “patrol” close to their starting points;
