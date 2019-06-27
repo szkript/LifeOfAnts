@@ -1,4 +1,5 @@
 package com.codecool;
 
-public class Ants {
+public abstract class Ants {
+    private int[][] position;
 }
