@@ -9,7 +9,7 @@ public abstract class Ant {
     private AntClass antClass;
 
     //x, y coord 100 is the limit of the map
-    private static final int maxRange = 50;
+    private static final int maxRange = 100;
 
     private void setPosition(int[][] position) {
         this.position = position;

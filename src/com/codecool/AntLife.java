@@ -5,9 +5,9 @@ import java.util.List;
 
 public class AntLife {
     private List<Ant> ants = new ArrayList<Ant>();
+    private static int[][] grid = new int[100][100];
 
     public static void main(String[] args) {
-
 
         Ant queen = new Queen();
         Ant worker = new Worker();

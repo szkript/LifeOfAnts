@@ -7,8 +7,8 @@ public class Worker extends Ant {
         setClass(AntClass.WORKER);
     }
     private int[][] initStartingPosition(){
-        int x = reverser(rand.nextInt(50));
-        int y = reverser(rand.nextInt(50));
+        int x = rand.nextInt(100);
+        int y = rand.nextInt(100);
         int[][] nextPosition = {{x,y}};
         return nextPosition;
     }
