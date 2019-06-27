@@ -34,4 +34,11 @@ public abstract class Ant {
         this.antClass = antClass;
     }
 
+    public int[][] initStartingPosition(){
+        int x = rand.nextInt(maxRange);
+        int y = rand.nextInt(maxRange);
+        int[][] nextPosition = {{x,y}};
+        return nextPosition;
+    }
+
 }
