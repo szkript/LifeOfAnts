@@ -2,13 +2,15 @@ package com.codecool;
 
 public class Worker extends Ant {
 
-    public Worker(){
+    public Worker() {
         setPosition(initStartingPosition());
         setClass(AntClass.WORKER);
     }
+
     @Override
-    public void makeStep(){
-        this.setPosition(initStartingPosition());
+    public void makeStep() {
+        //valid steps should be implemented here
+        setPosition(calculateNextMove(getAntClass()));
     }
 
 }

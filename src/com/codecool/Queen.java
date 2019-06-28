@@ -10,6 +10,6 @@ public class Queen extends Ant {
     }
     @Override
     public void makeStep(){
-        this.setPosition(pos);
+        //valid moves be here
     }
 }
