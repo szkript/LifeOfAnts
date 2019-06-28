@@ -18,7 +18,7 @@ public class AntLife {
         for (int i = 0; i < 5 ; i++){
             ants.add(new Worker());
             ants.add(new Drone());
-            ants.add(new Soldier());
+//            ants.add(new Soldier());
         }
     }
     /**
@@ -37,7 +37,7 @@ public class AntLife {
     public void timeStep(){
         int infoCount = 0;
         for (Ant ant : this.ants){
-                if (ant.getAntClass() == AntClass.DRONE && infoCount < 1) {
+                if (ant.getAntClass() == AntClass.SOLDIER && infoCount <1) {
                     System.out.println(ant.getPosition()[0][0] + " | " + ant.getPosition()[0][1]);
                     infoCount++;
                 }

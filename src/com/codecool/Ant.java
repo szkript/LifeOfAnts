@@ -19,6 +19,8 @@ public abstract class Ant {
     }
 
     public void makeStep() {
+        //valid steps should be implemented here
+        setPosition(calculateNextMove(getAntClass()));
     }
 
     public int reverser(int num) {
@@ -52,7 +54,7 @@ public abstract class Ant {
             int chance = rand.nextInt(100);
             int addition = getAntClass().getStepLimit();
             switch (antClass) {
-                case WORKER:
+                case WORKER: {
                     if (chance <= 25) {
                         //right
                         y += addition;
@@ -66,19 +68,44 @@ public abstract class Ant {
                         //down
                         x -= addition;
                     }
-                case DRONE:
+                    break;
+                }
+                case DRONE: {
                     int pointOfInterest = 50;
-                    if (x > pointOfInterest){
+                    if (x > pointOfInterest) {
                         x -= addition;
-                    }else if (x < pointOfInterest){
+                    } else if (x < pointOfInterest) {
                         x += addition;
-                    }else if (y > pointOfInterest){
+                    } else if (y > pointOfInterest) {
                         y -= addition;
-                    } else if (y < pointOfInterest){
+                    } else if (y < pointOfInterest) {
                         y += addition;
                     }
-                case QUEEN:
-                case SOLDIER:
+                    break;
+                }
+                case QUEEN: {
+                    //doesnt give a fck or is she?huehue
+                    break;
+                }
+//                case SOLDIER: {
+//                    String direction = Soldier();
+//                    System.out.println(direction);
+//                    switch (direction) {
+//                        case "up":
+//                            x += addition;
+//                            break;
+//                        case "left":
+//                            y -= addition;
+//                            break;
+//                        case "down":
+//                            x -= addition;
+//                            break;
+//                        case "right":
+//                            y += addition;
+//                            break;
+//                    }
+//                    break;
+//                }
             }
             if (inBounds(x) && inBounds(y)) {
                 notInBound = false;

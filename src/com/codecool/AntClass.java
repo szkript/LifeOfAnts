@@ -19,8 +19,4 @@ public enum AntClass {
     public int getStepLimit() {
         return stepLimit;
     }
-
-    //    public String getKey() {
-//        return key;
-//    }
 }

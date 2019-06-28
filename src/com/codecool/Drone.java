@@ -6,9 +6,4 @@ public class Drone extends Ant {
         setClass(AntClass.DRONE);
     }
 
-    @Override
-    public void makeStep(){
-        setPosition(calculateNextMove(getAntClass()));
-    }
-
 }

@@ -8,7 +8,7 @@ public class Main {
 
         AntLife antLife = new AntLife();
         while (!doomsday()){
-//            dailyReportMessage();
+            dailyReportMessage();
             antLife.timeStep();
         }
         System.out.println("days were liven: "+day);

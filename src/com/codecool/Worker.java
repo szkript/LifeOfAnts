@@ -7,10 +7,4 @@ public class Worker extends Ant {
         setClass(AntClass.WORKER);
     }
 
-    @Override
-    public void makeStep() {
-        //valid steps should be implemented here
-        setPosition(calculateNextMove(getAntClass()));
-    }
-
 }

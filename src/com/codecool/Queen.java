@@ -8,8 +8,5 @@ public class Queen extends Ant {
         setPosition(pos);
         setClass(AntClass.QUEEN);
     }
-    @Override
-    public void makeStep(){
-        //valid moves be here
-    }
+
 }
