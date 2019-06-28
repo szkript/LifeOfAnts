@@ -2,7 +2,7 @@ package com.codecool;
 
 public class Soldier extends Ant {
     public Soldier(){
-        makeStep(initStartingPosition());
+        setPosition(initStartingPosition());
         setClass(AntClass.SOLDIER);
 
     }

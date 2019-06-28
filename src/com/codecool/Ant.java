@@ -11,7 +11,7 @@ public abstract class Ant {
     //x, y coord 100 is the limit of the map
     private static final int maxRange = 100;
 
-    private void setPosition(int[][] position) {
+    public void setPosition(int[][] position) {
         this.position = position;
     }
 
@@ -19,9 +19,7 @@ public abstract class Ant {
         return position;
     }
 
-    public void makeStep(int[][] nextCoordinate){
-        setPosition(nextCoordinate);
-    }
+    public void makeStep(){}
 
     public int reverser(int num){
         if (rand.nextInt(100) <= 50){
@@ -33,12 +31,15 @@ public abstract class Ant {
     public void setClass(AntClass antClass) {
         this.antClass = antClass;
     }
+    public AntClass getAntClass(){
+        return antClass;
+    }
 
     public int[][] initStartingPosition(){
         int x = rand.nextInt(maxRange);
         int y = rand.nextInt(maxRange);
-        int[][] nextPosition = {{x,y}};
-        return nextPosition;
+        int[][] startPosition = {{x,y}};
+        return startPosition;
     }
 
 }

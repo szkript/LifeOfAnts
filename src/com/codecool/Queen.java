@@ -5,7 +5,11 @@ public class Queen extends Ant {
     private static final int[][] pos = {{50,50}};
 
     public Queen(){
-        makeStep(pos);
+        setPosition(pos);
         setClass(AntClass.QUEEN);
+    }
+    @Override
+    public void makeStep(){
+        this.setPosition(pos);
     }
 }

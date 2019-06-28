@@ -1,15 +1,17 @@
 package com.codecool;
 
 public enum AntClass {
-    WORKER("Worker"),
-    DRONE("Drone"),
-    QUEEN("Queen"),
-    SOLDIER("Soldier");
+    QUEEN("Queen", 1),
+    WORKER("Worker", 4),
+    DRONE("Drone", 2),
+    SOLDIER("Soldier", 3);
 
     private final String key;
+    public final int rank;
 
-    AntClass(String key){
+    AntClass(String key,int rank){
         this.key = key;
+        this.rank = rank;
     }
 
 //    public String getKey() {
