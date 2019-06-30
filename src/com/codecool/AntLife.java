@@ -18,7 +18,7 @@ public class AntLife {
         for (int i = 0; i < 5 ; i++){
             ants.add(new Worker());
             ants.add(new Drone());
-//            ants.add(new Soldier());
+            ants.add(new Soldier());
         }
     }
     /**
@@ -30,7 +30,6 @@ public class AntLife {
             grid[ant.getPosition()[0][0]][ant.getPosition()[0][1]] = ant.getAntClass().rank;
         }
     }
-
     /**
      * doing unique steps for each subclass( at least i hope so)
      */

@@ -20,7 +20,7 @@ public abstract class Ant {
 
     public void makeStep() {
         //valid steps should be implemented here
-        setPosition(calculateNextMove(getAntClass()));
+        setPosition(calculateNextMove(this));
     }
 
     public int reverser(int num) {
@@ -45,7 +45,7 @@ public abstract class Ant {
         return startPosition;
     }
 
-    public int[][] calculateNextMove(AntClass antClass) {
+    public int[][] calculateNextMove(Ant ant) {
         int x = this.getPosition()[0][0];
         int y = this.getPosition()[0][1];
         boolean notInBound = true;
@@ -87,25 +87,26 @@ public abstract class Ant {
                     //doesnt give a fck or is she?huehue
                     break;
                 }
-//                case SOLDIER: {
-//                    String direction = Soldier();
-//                    System.out.println(direction);
-//                    switch (direction) {
-//                        case "up":
-//                            x += addition;
-//                            break;
-//                        case "left":
-//                            y -= addition;
-//                            break;
-//                        case "down":
-//                            x -= addition;
-//                            break;
-//                        case "right":
-//                            y += addition;
-//                            break;
-//                    }
-//                    break;
-//                }
+                case SOLDIER: {
+                    Direction direction = ((Soldier) ant).getDirection();
+                    System.out.println(direction);
+                    switch (direction) {
+                        case UP:
+                            x += addition;
+                            break;
+                        case RIGHT:
+                            y -= addition;
+                            break;
+                        case DOWN:
+                            x -= addition;
+                            break;
+                        case LEFT:
+                            y += addition;
+                            break;
+                    }
+                    ((Soldier) ant).nextDirection();
+                    break;
+                }
             }
             if (inBounds(x) && inBounds(y)) {
                 notInBound = false;

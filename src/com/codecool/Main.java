@@ -1,7 +1,7 @@
 package com.codecool;
 
 public class Main {
-    private static int lifeCycle = 50;
+    private static int lifeCycle = 5;
     private static int day = 0;
 
     public static void main(String[] args){

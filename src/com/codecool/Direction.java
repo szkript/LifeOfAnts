@@ -1,13 +1,12 @@
 package com.codecool;
 
 public enum Direction {
-    LEFT("left"),
-    RIGHT("right"),
     UP("up"),
-    DOWN("down");
+    RIGHT("right"),
+    DOWN("down"),
+    LEFT("left");
 
-
-    private final String key;
+    public final String key;
 
     Direction(String key){
         this.key = key;
