@@ -18,7 +18,7 @@ public class Main {
     private static boolean doomsday(){
         lifeCycle--;
         day++;
-        return lifeCycle == 0 ? true : false;
+        return lifeCycle == 0;
     }
 
     private static void dailyReportMessage(){
